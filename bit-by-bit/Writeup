@@ -1,0 +1,6 @@
+1. Analysing the code, it can be noticed that the first few bytes of the chunk are not encrypted. 
+2. After doing reverse of the encode function, first few bytes can be seen.
+3. It resembled a message in english language.
+4. Use this text to guess the next letter, usually a space, ',' or '.' will come after a whole word. 
+5. Using this info p^k = c => k = c^p, where p is guessed character, k is key and c is encrypted character.
+6. After repeating these steps and manually updating the key, the whole text was decrypted

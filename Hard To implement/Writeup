@@ -1,0 +1,10 @@
+1. ECB known plaintext padding oracle is used
+2. since it is ecp encryption, the key is repeated blockwise.
+3. We get some encrypted string or when empty is sent.
+4. We can reveal the encrypted text's a character by adding known characters behind. 
+Like, 
+
+0*15 + c + 0*15 
+5. Since, each block is 16 bytes, we can try all 256 values for c and compare the first block with second.
+6. After revealing the characters, we can keep replacing the 0's from 0*15 strings with known part of flags (the last block)
+7. repeating this reveals the whole flag  
